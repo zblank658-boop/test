@@ -30,9 +30,9 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Made cards slightly wider on mobile screen */
             gap: 25px;
-            max-width: 900px;
+            max-width: 950px;
             width: 100%;
             margin-bottom: 2.5rem;
         }
@@ -53,9 +53,10 @@
 
         /* Polaroid Image Sizing */
         .polaroid img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+            width: 100%;        /* Stretches the image to full polaroid card width */
+            height: 280px;       /* Increased height slightly to balance the wider view */
+            object-fit: cover;   /* Crops perfectly to fill the width edge-to-edge */
+            object-position: center 15%; /* Shifts portrait focus up so her face isn't cut off */
             border-radius: 8px;
             margin-bottom: 12px;
         }
@@ -94,33 +95,29 @@
 </head>
 <body>
 
-    <h1>Our Sweetest Memories 📸</h1>
+    <h1>Your Sweetest Memories 📸</h1>
 
     <div class="gallery-grid">
-        <!-- Card 1: Cute Teddy -->
         <div class="polaroid">
-            <img src="Nami1.jpeg" alt="Cute baby photo" width="400">
-            <p>Day One ✨</p>
+            <img src="Nami1.jpg" alt="Nami">
+            <p>Child Nami ✨</p>
         </div>
-        <!-- Card 2: Strawberry Cake -->
         <div class="polaroid">
             <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&auto=format&fit=crop&q=80" alt="Sweet cake">
             <p>Sweetest Moments 🍓</p>
         </div>
-        <!-- Card 3: Sparklers / Celebration -->
         <div class="polaroid">
             <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&auto=format&fit=crop&q=80" alt="Celebration vibe">
             <p>Countless Shared Laughs 🎉</p>
         </div>
-        <!-- Card 4: Pastel Flowers -->
         <div class="polaroid">
             <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=400&auto=format&fit=crop&q=80" alt="Cute flowers">
             <p>Wishing You Joy Always 🌸</p>
         </div>
     </div>
 
-    <a href="gift.html" class="nav-btn">Go to Gift Room 🎁</a>
-    <a href="wishes.html" class="back-link">← Back to Wishes</a>
+    <a href="wishes.html" class="nav-btn">Go Wishes Room 🎁</a>
+    <a href="index.html" class="back-link">← Back to Main Page</a>
 
 </body>
 </html>
